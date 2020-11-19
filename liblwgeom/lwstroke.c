@@ -768,7 +768,7 @@ lwmsurface_linearize(const LWMSURFACE *msurface, double tol,
 			polys[i] = (LWGEOM *)lwpoly_construct(msurface->srid, NULL, poly->nrings, ptarray);
 		}
 	}
-	ogeom = (LWMPOLY *)lwcollection_construct(MULTIPOLYGONTYPE, msurface->srid, NULL, msurface->ngeoms, polys);
+	ogeom = (LWMPOLY *)lwcollection_construct(MULTISURFACETYPE, msurface->srid, NULL, msurface->ngeoms, polys);
 	return ogeom;
 }
 

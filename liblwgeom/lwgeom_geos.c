@@ -513,6 +513,7 @@ LWGEOM2GEOS(const LWGEOM* lwgeom, uint8_t autofix)
 	case MULTIPOLYGONTYPE:
 	case TINTYPE:
 	case COLLECTIONTYPE:
+	case MULTISURFACETYPE:
 		if (lwgeom->type == MULTIPOINTTYPE)
 			geostype = GEOS_MULTIPOINT;
 		else if (lwgeom->type == MULTILINETYPE)
